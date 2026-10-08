@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch | Descubra seu próximo filme</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  
+  <header class="header">
+    <div class="container header-content">
+      <a href="home.html" class="logo">
+        <i class="fas fa-film"></i>
+        <span>CineMatch</span>
+      </a>
+
+      <nav class="nav">
+        <a href="home.html" class="nav-link active">Início</a>
+        <a href="../explorar/explorar.html" class="nav-link">Explorar</a>
+        <a href="../favoritos/favoritos.html" class="nav-link">Favoritos</a>
+        <a href="../perfil/perfil.html" class="nav-link">Perfil</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon" title="Buscar">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="btn-icon" title="Notificações">
+          <i class="fas fa-bell"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Olá! 👋</h1>
+        <p class="hero-subtitle">O que você quer assistir hoje?</p>
+
+        <div class="hero-actions">
+          <a href="../explorar/explorar.html" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            Encontre um filme
+          </a>
+          <button class="btn btn-secondary" id="btn-surpreenda">
+            <i class="fas fa-dice"></i>
+            Escolha por mim
+          </button>
+          <button class="btn btn-outline" id="btn-filtrar">
+            <i class="fas fa-sliders-h"></i>
+            Filtrar
+          </button>
+        </div>
+
+        
+        <div class="filtros-painel" id="filtros-painel">
+          <p class="filtros-titulo">Filtrar o sorteio por:</p>
+          <div class="filtros-opcoes">
+            <button class="filtro-btn" data-filtro="decada">Década</button>
+            <button class="filtro-btn" data-filtro="duracao">Duração</button>
+            <button class="filtro-btn" data-filtro="genero">Gênero</button>
+            <button class="filtro-btn" data-filtro="nota">Nota</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" id="populares">
+    <div class="container">
+      <div class="section-header">
+        <h2>🔥 Em alta agora</h2>
+        <a href="../explorar/explorar.html" class="ver-mais">Ver todos <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="movies-row" id="movies-populares"></div>
+    </div>
+  </section>
+
+ 
+  <section class="section" id="lancamentos">
+    <div class="container">
+      <div class="section-header">
+        <h2>🆕 Lançamentos</h2>
+        <a href="../explorar/explorar.html" class="ver-mais">Ver todos <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="movies-row" id="movies-lancamentos"></div>
+    </div>
+  </section>
+
+  
+  <section class="section" id="bem-avaliados">
+    <div class="container">
+      <div class="section-header">
+        <h2>⭐ Mais bem avaliados</h2>
+        <a href="../explorar/explorar.html" class="ver-mais">Ver todos <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="movies-row" id="movies-avaliados"></div>
+    </div>
+  </section>
+
+  
+  <section class="section surpresa-section">
+    <div class="container">
+      <div class="surpresa-card" id="filme-surpresa">
+        <div class="surpresa-content">
+          <span class="surpresa-badge">🎲 Filme Surpresa</span>
+          <h2 id="surpresa-titulo">Carregando...</h2>
+          <p id="surpresa-info"></p>
+          <p id="surpresa-sinopse" class="sinopse"></p>
+          <div class="surpresa-actions">
+            <a href="../filme/filme.html" class="btn btn-primary" id="surpresa-link">
+              Ver detalhes
+            </a>
+            <button class="btn btn-outline" id="btn-outro-surpresa">
+              <i class="fas fa-sync-alt"></i> Outro filme
+            </button>
+          </div>
+        </div>
+        <div class="surpresa-poster">
+          <img id="surpresa-img" src="" alt="Poster do filme">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 CineMatch — Projeto Integrado Multidisciplinar II</p>
+      <p class="footer-note">Dados fornecidos por The Movie Database (TMDB)</p>
+    </div>
+  </footer>
+
+  <script src="../../config.js"></script>
+  <script src="../../index.js"></script>
+<script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0f0f13;
+  --bg-card: #1a1a24;
+  --primary: #e50914;
+  --text: #ffffff;
+  --text-muted: #a0a0b0;
+  --border: #2a2a3a;
+  --radius: 12px;
+}
+
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,15,19,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-content { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+.nav { display: flex; gap: 28px; }
+.nav-link { color: var(--text-muted); font-weight: 500; }
+.nav-link:hover { color: var(--text); }
+.btn-icon { background: transparent; border: none; color: var(--text-muted); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; }
+
+/* Hero do filme */
+.filme-hero {
+  position: relative;
+  min-height: 520px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background-size: cover;
+  background-position: center;
+}
+.filme-hero-overlay {
+  background: linear-gradient(to right, rgba(15,15,19,0.95) 30%, rgba(15,15,19,0.6));
+  min-height: 520px;
+  display: flex; align-items: center;
+}
+.filme-hero-content {
+  display: flex; gap: 40px; align-items: center; padding: 40px 20px;
+}
+.filme-poster {
+  width: 280px; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+.filme-info h1 { font-size: 2.6rem; margin-bottom: 12px; }
+.filme-meta { display: flex; gap: 16px; color: var(--text-muted); margin-bottom: 12px; font-size: 1.05rem; }
+.filme-meta .nota { color: #ffd700; font-weight: 600; }
+.generos { color: var(--primary); margin-bottom: 16px; }
+.sinopse { max-width: 600px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; }
+
+.filme-actions { display: flex; gap: 14px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 50px; font-weight: 600; border: none; cursor: pointer;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+.section { padding: 40px 0; }
+.section h2 { margin-bottom: 20px; font-size: 1.4rem; }
+
+.elenco { display: flex; gap: 20px; flex-wrap: wrap; }
+.ator {
+  background: var(--bg-card); border-radius: 10px; padding: 16px 20px; text-align: center; min-width: 120px;
+}
+.ator span { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+
+.diretor { font-size: 1.1rem; color: var(--text-muted); }
+
+.movies-row { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; }
+.movie-card { flex: 0 0 160px; background: var(--bg-card); border-radius: 10px; overflow: hidden; }
+.movie-card img { width: 100%; aspect-ratio: 2/3; object-fit: cover; }
+.movie-card .info { padding: 10px; font-size: 0.9rem; }
+
+.avaliar-box {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; max-width: 600px;
+}
+.estrelas { color: #ffd700; font-size: 1.6rem; margin-bottom: 16px; cursor: pointer; }
+.avaliar-box textarea {
+  width: 100%; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); padding: 14px; margin-bottom: 16px; resize: vertical;
+}
+
+.footer { border-top: 1px solid var(--border); padding: 30px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+
+@media (max-width: 800px) {
+  .filme-hero-content { flex-direction: column; text-align: center; }
+  .filme-poster { width: 200px; }
+  .nav { display: none; }
+}

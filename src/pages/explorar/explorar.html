@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar | CineMatch</title>
+  <link rel="stylesheet" href="explorar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="../home/home.html" class="logo">
+        <i class="fas fa-film"></i>
+        <span>CineMatch</span>
+      </a>
+      <nav class="nav">
+        <a href="../home/home.html" class="nav-link">Início</a>
+        <a href="explorar.html" class="nav-link active">Explorar</a>
+        <a href="../favoritos/favoritos.html" class="nav-link">Favoritos</a>
+        <a href="../perfil/perfil.html" class="nav-link">Perfil</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon"><i class="fas fa-search"></i></button>
+        <button class="btn-icon"><i class="fas fa-bell"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="explorar-hero">
+      <h1>Encontre um filme</h1>
+      <p>Use os filtros abaixo para descobrir o que assistir</p>
+    </section>
+
+    
+    <section class="filtros">
+      <div class="filtro-grupo">
+        <label>Gênero</label>
+        <select id="filtro-genero">
+          <option value="">Todos</option>
+          <option value="acao">Ação</option>
+          <option value="comedia">Comédia</option>
+          <option value="terror">Terror</option>
+          <option value="ficcao">Ficção científica</option>
+          <option value="romance">Romance</option>
+          <option value="animacao">Animação</option>
+          <option value="drama">Drama</option>
+        </select>
+      </div>
+
+      <div class="filtro-grupo">
+        <label>Período</label>
+        <div class="periodo">
+          <input type="number" id="ano-inicio" placeholder="1990" min="1900" max="2026">
+          <span>até</span>
+          <input type="number" id="ano-fim" placeholder="2026" min="1900" max="2026">
+        </div>
+      </div>
+
+      <div class="filtro-grupo">
+        <label>Nota mínima</label>
+        <select id="filtro-nota">
+          <option value="">Qualquer</option>
+          <option value="5">5.0+</option>
+          <option value="6">6.0+</option>
+          <option value="7">7.0+</option>
+          <option value="8">8.0+</option>
+          <option value="9">9.0+</option>
+        </select>
+      </div>
+
+      <div class="filtro-grupo">
+        <label>Duração</label>
+        <select id="filtro-duracao">
+          <option value="">Qualquer</option>
+          <option value="90">Até 90 min</option>
+          <option value="120">90–120 min</option>
+          <option value="121">Mais de 120 min</option>
+        </select>
+      </div>
+
+      <div class="filtro-grupo">
+        <label>Popularidade</label>
+        <select id="filtro-popularidade">
+          <option value="">Qualquer</option>
+          <option value="popular">Popular</option>
+          <option value="muito">Muito popular</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" id="btn-buscar">
+        <i class="fas fa-search"></i> Encontrar filmes
+      </button>
+    </section>
+
+    
+    <section class="resultados">
+      <h2>Resultados</h2>
+      <div class="movies-grid" id="resultados-filmes">
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 CineMatch — Projeto Integrado Multidisciplinar II</p>
+    </div>
+  </footer>
+
+  <script src="../../config.js"></script>
+  <script src="../../index.js"></script>
+  <script src="explorar.js"></script>
+</body>
+</html>
